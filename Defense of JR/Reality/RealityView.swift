@@ -15,8 +15,8 @@ struct RealityView: View {
         VStack {
             ZStack {
                 ARViewContainer(reality: self.controller)
-                if controller.state.placing() {
-                    Text("Tap to place!")
+                if !controller.state.placed() {
+                    Text(controller.state.placing() ? "Tap to place!" : "Scan!")
                         .foregroundColor(.white)
                         .italic()
                         .padding()

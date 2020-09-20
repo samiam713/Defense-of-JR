@@ -27,6 +27,15 @@ class Reality: NSObject, ObservableObject {
                 return false
             }
         }
+        
+        func placed() -> Bool {
+            switch self {
+            case .placed(_):
+                return true
+            default:
+                return false
+            }
+        }
     }
     @Published var state: State = .scanning
     override init() {

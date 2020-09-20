@@ -32,11 +32,11 @@ extension AppController {
         state = .mainMenu
         window.rootViewController = UIHostingController(rootView: MainMenuView())
     }
-        func toRealityView() {
-            let reality = Reality()
-            state = .reality(reality)
-            window.rootViewController = UIHostingController(rootView: RealityView(controller: reality))
-        }
+    func toRealityView() {
+        let reality = Reality()
+        state = .reality(reality)
+        window.rootViewController = UIHostingController(rootView: RealityView(controller: reality))
+    }
     
     func toVictoryView(image: UIImage, count: Int) {
         let prev = UserDefaults.standard.integer(forKey: "HighScore")
